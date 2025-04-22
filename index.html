@@ -1,77 +1,136 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Universidade Exemplo</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #00274d;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        nav {
-            background-color: #004080;
-            padding: 10px;
-            text-align: center;
-        }
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-        }
-        main {
-            padding: 20px;
-        }
-        footer {
-            background-color: #00274d;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre mim</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background-color: #2C5F2D;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #A8D5BA;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #1B5E20;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      position: relative;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 100%;
+      height: 2px;
+      background-color: #1B5E20;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    nav a:hover {
+      color: #145A32;
+      transform: scale(1.1);
+    }
+
+    nav a:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    main {
+      padding: 20px;
+      flex: 1;
+    }
+
+    section {
+      margin-top: 30px;
+    }
+
+    footer {
+      background-color: #2C5F2D;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+  </style>
 </head>
 <body>
 
-    <header>
-        <h1>Universidade Exemplo</h1>
-        <p>Conhecimento que transforma</p>
-    </header>
+  <header>
+    <h1>Quem sou eu?</h1>
+    <p>HTML | CSS</p>
+  </header>
 
-    <nav>
-        <a href="#">Início</a>
-        <a href="#">Cursos</a>
-        <a href="#">Sobre</a>
-        <a href="#">Contato</a>
-    </nav>
+  <nav>
+    <a href="#">Início</a>
+    <a href="#">Certificados</a>
+    <a href="#">Feedback</a>
+    <a href="#">Contato</a>
+  </nav>
 
-    <main>
-        <h2>Bem-vindo à Universidade Exemplo</h2>
-        <p>
-            Aqui você encontra os melhores cursos de graduação, pós-graduação e extensão.
-            Com professores qualificados e estrutura moderna, nossa missão é formar profissionais preparados para o futuro.
-        </p>
+  <main>
+    <h2>Bem-vindo à construção do meu site!</h2>
+    <p>
+      Aqui eu vou me apresentar um pouco mais e contar sobre meu desenvolvimento profissional e pessoal até o momento, por meio da criação do meu primeiro site...
+    </p>
 
-        <h3>Nossos Destaques</h3>
-        <ul>
-            <li>Laboratórios de última geração</li>
-            <li>Biblioteca com mais de 100 mil títulos</li>
-            <li>Programas de intercâmbio</li>
-        </ul>
-    </main>
+    <h3>Minhas competências</h3>
+    <ul>
+      <li>Gestão de Estoque</li>
+      <li>Resiliência</li>
+      <li>Autodesenvolvimento</li>
+    </ul>
 
-    <footer>
-        <p>&copy; 2025 Universidade Exemplo - Todos os direitos reservados.</p>
-    </footer>
+    <section>
+      <h3>O que venho estudando</h3>
+      <p>
+        Atualmente estou cursando <strong>Engenharia de Software</strong> pela Unicesumar, onde tenho me aprofundado nos fundamentos da área e aplicado na prática os conhecimentos.
+      </p>
+      <p>
+        Venho explorando com bastante dedicação o universo do <strong>HTML</strong> e comecei a estudar <strong>CSS</strong>, buscando evoluir aos poucos para depois entrar em <strong>JavaScript</strong>. No momento, uso o <strong>Sublime Text</strong> para meus projetos, mas planejo migrar para o <strong>VSCode</strong> à medida que avançar no aprendizado. Também tenho interesse em conhecer o <strong>Bootstrap</strong>.
+      </p>
+      <p>
+        Já finalizei o curso de <strong>Administração de Banco de Dados</strong> pelo Bradesco e estou estudando <strong>Inteligência Artificial</strong>, com um foco bem prático: entender os fundamentos, ferramentas e como aplicar tudo isso no dia a dia.
+      </p>
+      <p>
+        Além disso, trabalho na área agrícola, com <strong>manutenção de máquinas como tratores, colhedoras e implementos</strong>, e mais recentemente tenho atuado com <strong>monitoramento e telemetria</strong>, analisando dados operacionais para melhorar a colheita da cana-de-açúcar. Tenho utilizado o app SGPA da Solinfitec para extrair informações de campo e buscar soluções práticas a partir dos dados.
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - Todos os direitos reservados.</p>
+  </footer>
 
 </body>
 </html>
