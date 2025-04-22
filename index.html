@@ -19,6 +19,7 @@
       display: flex;
       flex-direction: column;
       font-family: Arial, sans-serif;
+      background-color: #f9fdf9;
     }
 
     header {
@@ -41,6 +42,10 @@
       font-weight: bold;
       position: relative;
       transition: transform 0.2s ease-in-out;
+    }
+
+    nav a.ativo {
+      border-bottom: 2px solid #1B5E20;
     }
 
     nav a::after {
@@ -71,8 +76,26 @@
       flex: 1;
     }
 
+    h2 {
+      font-size: 28px;
+      color: #2C5F2D;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li::before {
+      content: "✔️ ";
+      margin-right: 5px;
+      color: #2C5F2D;
+    }
+
     section {
       margin-top: 30px;
+      padding-left: 15px;
+      border-left: 4px solid #1B5E20;
+      background-color: #F0FFF4;
     }
 
     footer {
@@ -80,6 +103,22 @@
       color: white;
       text-align: center;
       padding: 15px;
+    }
+
+    footer nav {
+      background: none;
+      padding-top: 10px;
+    }
+
+    footer a {
+      color: #C8E6C9;
+      text-decoration: none;
+      font-size: 14px;
+      margin: 0 10px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -91,7 +130,7 @@
   </header>
 
   <nav>
-    <a href="index.html">Início</a>
+    <a href="index.html" class="ativo">Início</a>
     <a href="certificados.html">Certificados</a>
     <a href="feedback.html">Feedback</a>
     <a href="contato.html">Contato</a>
@@ -130,6 +169,12 @@
 
   <footer>
     <p>&copy; 2025 - Todos os direitos reservados.</p>
+    <nav>
+      <a href="index.html">Início</a> |
+      <a href="certificados.html">Certificados</a> |
+      <a href="feedback.html">Feedback</a> |
+      <a href="contato.html">Contato</a>
+    </nav>
   </footer>
 
 </body>
