@@ -35,14 +35,44 @@
     }
 
     nav a {
-      color: white;
+      color: #1B5E20;
       margin: 0 15px;
       text-decoration: none;
+      font-weight: bold;
+      position: relative;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 100%;
+      height: 2px;
+      background-color: #1B5E20;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    nav a:hover {
+      color: #145A32;
+      transform: scale(1.1);
+    }
+
+    nav a:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
     }
 
     main {
       padding: 20px;
       flex: 1;
+    }
+
+    section {
+      margin-top: 30px;
     }
 
     footer {
@@ -79,6 +109,23 @@
       <li>Resiliência</li>
       <li>Autodesenvolvimento</li>
     </ul>
+
+    <section>
+      <h3>O que venho estudando</h3>
+      <p>
+        Atualmente estou cursando <strong>Engenharia de Software</strong> pela Unicesumar, onde tenho me aprofundado nos fundamentos da área e aplicado na prática os conhecimentos.
+      </p>
+      <p>
+        Venho explorando com bastante dedicação o universo do <strong>HTML</strong> e comecei a estudar <strong>CSS</strong>, buscando evoluir aos poucos para depois entrar em <strong>JavaScript</strong>. No momento, uso o <strong>Sublime Text</strong> para meus projetos, mas planejo migrar para o <strong>VSCode</strong> à medida que avançar no aprendizado. Também tenho interesse em conhecer o <strong>Bootstrap</strong>.
+      </p>
+      <p>
+        Já finalizei o curso de <strong>Administração de Banco de Dados</strong> pelo Bradesco e estou estudando <strong>Inteligência Artificial</strong>, com um foco bem prático: entender os fundamentos, ferramentas e como aplicar tudo isso no dia a dia.
+      </p>
+      <p>
+        Além disso, trabalho na área agrícola, com <strong>manutenção de máquinas como tratores, colhedoras e implementos</strong>, e mais recentemente tenho atuado com <strong>monitoramento e telemetria</strong>, analisando dados operacionais para melhorar a colheita da cana-de-açúcar. Tenho utilizado o app SGPA da Solinfitec para extrair informações de campo e buscar soluções práticas a partir dos dados.
+      </p>
+    </section>
+
   </main>
 
   <footer>
